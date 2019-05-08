@@ -35,26 +35,18 @@ public class LemurDatabase {
             
             if (type == 1){   
             Mammal bertha = new Mammal();
-            bertha.setAge(897);
-            bertha.setGender("Female");
-            bertha.setWeight(987);
             lemurs[i] = new DesertLemur();
          
-            
-        }else if (type ==2){
+            }else if (type ==2){
            
             Mammal john = new Mammal();
-            john.setAge(99);
-            john.setGender("Male");
-            john.setWeight(45);
-       
            lemurs[i] = new TreeLemur();
-        }else if (type == 3){
-            lemurs[i] = new JungleLemur();
+           
+            }else if (type == 3){
             Mammal jack = new Mammal();
-            jack.setAge(10);
-            jack.setGender("Male");
-            jack.setWeight(67);
+            lemurs[i] = new JungleLemur();
+           
+           
 
         }else{
                 System.out.println("Please enter a valid entry!");

@@ -9,13 +9,19 @@ package lemurdatabase;
  * @author lewhi7273
  */
 public class Mammal extends LemurDatabase{
-  private int itsAge;
-  private int itsWeight;
+  private int itsAge, chosenGend;
+  private double itsWeight;
   private String breed , gender;
 
   public Mammal() {
-    itsAge = 2;
-    itsWeight = 5;
+ itsAge = (int)(Math.random() * 12 + 1);
+ itsWeight = (Math.random() * 5 + 1);
+ chosenGend = (int)((Math.random()) * 2);
+ 
+ if(chosenGend == 1){
+     gender = "Male";
+ }else
+     gender = "Female";
   }
 
   public int getAge() {
@@ -25,7 +31,7 @@ public class Mammal extends LemurDatabase{
       return gender;
   }
  
-  public int getWeight() {
+  public double getWeight() {
     return itsWeight;
   }
 
@@ -44,7 +50,7 @@ public class Mammal extends LemurDatabase{
   
 
   public String toString() {
-     String output = "Age = " + itsAge + "\nWeight = " + itsWeight + "\nGender = " + gender + "\n";
+     String output = "Age = " + itsAge + "\nWeight = " + itsWeight + " KG \nGender = " + gender + "\n";
         return output;
   }
 }
